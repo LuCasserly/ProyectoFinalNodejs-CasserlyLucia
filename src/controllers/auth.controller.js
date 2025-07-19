@@ -1,10 +1,10 @@
 import jwt from "jsonwebtoken";
 
 export const loginUser = (req, res) => {
-  const { email, password } = req.body;
+  const { username, password } = req.body;
 
-  if (email === "admin" && password === "admin123") {
-    const token = jwt.sign({ email }, process.env.JWT_SECRET, {
+  if (username === "admin" && password === "admin123") {
+    const token = jwt.sign({ username }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
     return res.json({ token });

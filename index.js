@@ -2,7 +2,7 @@ import "dotenv/config";
 import express from "express";
 import productsRouter from "./src/routes/products.router.js";
 import authRouter from "./src/routes/auth.router.js";
-/*import notFoundMiddleware from "./src/middlewares/notFound.js";*/
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;

@@ -1,4 +1,4 @@
-import { db } from "./firebase.js";
+import { db } from "./data.js";
 
 import {
   collection,
@@ -10,7 +10,7 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 
-const productsCollection = collection(db, "indumentaria");
+const productsCollection = collection(db, "Indumentaria");
 
 export const getAllProducts = async () => {
   try {

@@ -1,4 +1,4 @@
-import express from "express";
+/*import express from "express";
 const router = express.Router();
 
 import {
@@ -9,16 +9,29 @@ import {
   deleteProduct,
 } from "../controllers/products.controller.js";
 
-import authMiddleware from "../middlewares/auth.js";
+import auth from "../middlewares/auth.middleware.js";
 
-router.get("/products", getAllProducts);
-router.get("/products/:id", getProductById);
+router.get("/", getAllProducts);
+router.get("/:id", getProductById);
 
-router.post("/products", auth, createProduct);
+router.post("/", auth, createProduct);
 
-router.put("/products/:id", auth, updateProduct);
+router.put("/:id", auth, updateProduct);
 
-router.delete("/products/:id", auth, deleteProduct);
+router.delete("/:id", auth, deleteProduct);
 
+
+export default router;*/
+
+import express from "express";
+const router = express.Router();
+
+console.log("✅ Cargado: products.router.js");
+
+router.get("/", (req, res) => {
+  res.send("✅ ¡Ruta /api/products responde OK!");
+});
 
 export default router;
+
+

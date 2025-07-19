@@ -10,7 +10,7 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 
-const productsCollection = collection(db, "Indumentaria");
+const productsCollection = collection(db, "products");
 
 export const getAllProducts = async () => {
   try {
